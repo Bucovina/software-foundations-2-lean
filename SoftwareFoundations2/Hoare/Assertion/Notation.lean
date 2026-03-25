@@ -213,8 +213,8 @@ attribute [aesop norm (rule_sets := [assertion])] State.set_id
 attribute [aesop norm (rule_sets := [assertion])] State.set_comm
 
 macro "verify_assertion" : tactic =>
-  `(tactic| simp [BExp.assert, ValThunk.ofNat, ValThunk.ofVar, ValThunk.ofAExp,
-            Eval.add, Eval.sub, Eval.mul, toAssert, Assertion.implies,
+  `(tactic| simp_all [BExp.assert, ValThunk.ofNat, ValThunk.ofVar, ValThunk.ofAExp,
+            Eval.add, Eval.sub, Eval.mul, toAssert, Assertion.true, Assertion.implies,
             Assertion.top, Assertion.bot, Assertion.eq, Assertion.neq,
             Assertion.leq, Assertion.le, Assertion.geq, Assertion.ge,
             Assertion.impl, Assertion.iff, Assertion.or, Assertion.and,
