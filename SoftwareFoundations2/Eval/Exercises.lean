@@ -34,12 +34,11 @@ theorem ceval_example2 :
   · apply EAsgn
     · rfl
     · rfl
-  · simp only [AExp.eval]
-    apply ESeq
+  · apply ESeq
     · apply EAsgn
       · rfl
       · rfl
-    · simp only [AExp.eval]
-      apply EAsgn
+    · apply EAsgn
       · rfl
-      · simp [State.set_comm]
+      · simp only [AExp.eval]
+        grind
